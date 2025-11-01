@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Live Viewer - Assista Lives no PC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fab fa-tiktok"></i>
+                <h1>TikTok Live Viewer</h1>
+            </div>
+            <p class="subtitle">Assista lives do TikTok no seu PC sem precisar fazer login</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        id="liveUrl" 
+                        placeholder="Cole aqui o link da live do TikTok (ex: https://www.tiktok.com/@usuario/live)"
+                        class="url-input"
+                    >
+                    <button id="loadLive" class="load-btn">
+                        <i class="fas fa-play"></i>
+                        Carregar Live
+                    </button>
+                </div>
+                <div class="help-text">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Copie o link de uma live ativa do TikTok e cole acima para assistir</span>
+                </div>
+            </div>
+
+            <div class="video-section" id="videoSection">
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Carregando live...</p>
+                </div>
+                
+                <div class="video-container" id="videoContainer" style="display: none;">
+                    <iframe 
+                        id="liveFrame" 
+                        src="" 
+                        frameborder="0" 
+                        allowfullscreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    ></iframe>
+                </div>
+
+                <div class="placeholder" id="placeholder">
+                    <div class="placeholder-content">
+                        <i class="fas fa-video"></i>
+                        <h3>Nenhuma live carregada</h3>
+                        <p>Cole o link de uma live do TikTok acima para começar a assistir</p>
+                    </div>
+                </div>
+
+                <div class="error-message" id="errorMessage" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Erro ao carregar live</h3>
+                    <p>Verifique se o link está correto e se a live ainda está ativa</p>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3><i class="fas fa-question-circle"></i> Como usar:</h3>
+                <ol>
+                    <li>Abra o TikTok no seu celular ou navegador</li>
+                    <li>Encontre uma live que você quer assistir</li>
+                    <li>Copie o link da live (botão compartilhar → copiar link)</li>
+                    <li>Cole o link no campo acima e clique em "Carregar Live"</li>
+                    <li>Aproveite a live no seu PC!</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>
+                <i class="fas fa-heart"></i>
+                Feito para assistir TikTok Lives no PC de forma simples
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
